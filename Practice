@@ -1,0 +1,13 @@
+M1 = [[1, 2, 3], [-2, 3, 7]]
+M2 = [[1], [0], [-1]]
+
+def array_mult(M1, M2):
+    M3 = [[0 for i in range(len(M2[0]))] for j in range(len(M1))]
+    print(M3)
+    for i in range(len(M1)):
+        for j in range(len(M2[0])):
+            for k in range(len(M2)):
+                M3[i][j] += M1[i][k]*M2[k][j]
+    print(M3)
+
+array_mult(M1, M2)
